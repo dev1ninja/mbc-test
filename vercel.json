@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/**/*.{js,ts}": {
+      "runtime": "nodejs14.15.4"
+    }
+  },
+  "engines": {
+    "node": "14.15.4"
+  }
+}
