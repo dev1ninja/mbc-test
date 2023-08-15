@@ -1,0 +1,68 @@
+.webcam {
+    margin: 3rem 0;
+    height: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9;
+    border-radius: 50%;
+    width: 32.5rem;
+    border: 0.2rem solid #fff;
+    height: auto;
+}
+.content-wrapper {
+    text-align: center;
+    height: 100vh;
+    img {
+        padding-top: 3rem;
+        width: 50%;
+    }
+    .title {
+        font-size: 1.6rem;
+        color: var(--color-welcome);
+        padding: 2rem;
+    }
+    .capture-icon {
+        fill: #c4c4c4 !important;
+        font-size: 10rem !important;
+    }
+}
+.captured-image {
+    margin: 5rem;
+    border: 1px solid #fff;
+    img {
+        width: 100%;
+        padding: 0;
+    }
+}
+.redo-button {
+    text-transform: capitalize !important;
+    border: 1px solid var(--primary-button) !important;
+    color: var(--primary-button) !important;
+    background: transparent !important;
+    padding: 1rem 2.4rem !important;
+    border-radius: 10rem !important;
+    font-weight: 500 !important;
+}
+
+#container-circles {
+    bottom: -1rem !important;
+}
+.react-html5-camera-photo > img,
+.react-html5-camera-photo > video {
+    width: 75% !important;
+}
+.error-msg-content {
+    margin: 0 5rem;
+    p {
+        font-size: 1.4rem !important;
+        color: #fff;
+    }
+    .close-icon {
+        padding: 2rem;
+    }
+    .inlineButton {
+        margin-left: 0 !important;
+        margin-top: 4rem !important;
+    }
+}

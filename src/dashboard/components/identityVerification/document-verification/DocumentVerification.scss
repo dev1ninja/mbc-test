@@ -1,0 +1,73 @@
+.link-to {
+    color: var(--primary-button);
+    padding-left: 0.5rem;
+}
+@media screen and (min-width: 0) and (max-width: 1024px) {
+    .mobile {
+        display: block !important;
+    }
+    .desktop {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 3922px) {
+    .mobile {
+        display: none !important;
+    }
+    .desktop {
+        left: 0 !important;
+    }
+}
+
+.desktop {
+    text-align: center;
+    padding: 14rem 30rem;
+    .content-desktop {
+        text-align: left;
+        font-weight: 400;
+        color: #ffff;
+        font-size: 2.4rem;
+    }
+    .desktop-logo {
+        position: absolute;
+        top: 3rem;
+        left: 0rem;
+        img {
+            width: 30% !important;
+        }
+    }
+    &::after {
+        content: "";
+        width: 2.5rem;
+        height: 100vh;
+        background: linear-gradient(
+            rgba(78, 247, 228, 0.28),
+            rgba(0, 194, 255, 0.2),
+            rgba(42, 147, 238, 0.33),
+            rgba(72, 100, 232, 0.35),
+            rgba(203, 93, 219, 0.29)
+        );
+        position: fixed;
+        filter: blur(6rem);
+        z-index: 1000;
+    }
+}
+#grad {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 3.2rem;
+    left: 3.2rem;
+}
+
+.desktop:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0.8rem;
+    left: 0;
+    right: 0.8rem;
+    background-image: linear-gradient(to bottom, #4ef7e4, #00c2ff, #2a93ee, #4864e8, #cb5ddb);
+    border: 1px solid #fff;
+}

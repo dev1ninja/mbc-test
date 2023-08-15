@@ -1,0 +1,3 @@
+export const SET_ACTIVE = "SET_ACTIVE";
+export const SET_COMPLETE = "SET_COMPLETE";
+export const SET_DEFAULT_STATE = "SET_DEFAULT_STATE";

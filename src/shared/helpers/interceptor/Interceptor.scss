@@ -1,0 +1,59 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    -ms-background-color: #1113006e;
+    background-color: #1113006e;
+}
+
+.loader {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 9rem;
+    height: 9rem;
+    margin: -5rem 0 0 -5rem;
+    border-radius: 50%;
+    background: linear-gradient(#00e4fe, #009ffd, #be17fb);
+    box-shadow: 0 0 10rem -5rem black;
+    transform-origin: center;
+    animation: spinloader 1s linear infinite;
+}
+
+.loader::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10rem;
+}
+.loader-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7rem;
+    height: 7rem;
+    margin: -4rem 0 0 -4rem;
+}
+@keyframes spinloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinlogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

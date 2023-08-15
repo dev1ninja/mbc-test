@@ -1,0 +1,289 @@
+
+:root {
+    --grid-column-1-width: calc(100vw / 12);
+    --grid-column-2-width: calc(100vw / 6);
+    --font-Montserrat_medium: "Montserrat_medium";
+    /** primary **/
+    --primary-button: #00b9b9;
+    --primary-checkbox: #00cfcf;
+    --primary-border: #0cf8e9;
+    --primary-rgb: 56, 128, 255;
+    --primary-contrast: #ffffff;
+    --primary-contrast-rgb: 255, 255, 255;
+    --primary-shade: #7be495;
+    --primary-tint: #56c596;
+    --primary-title: #205072;
+    --primary-card-shade: #329d9c36;
+    --primary-label-color: rgba(255, 255, 255, 0.42);
+
+    /** secondary **/
+    --color-secondary: #2c6975;
+    --color-secondary-rgb: 61, 194, 255;
+    --color-secondary-contrast: #ffffff;
+    --color-secondary-contrast-rgb: 255, 255, 255;
+    --color-secondary-shade: #6882a0;
+    --color-secondary-tint: #cde0c9;
+
+    /** tertiary **/
+    --color-tertiary: #47cacc;
+    --color-tertiary-rgb: 82, 96, 255;
+    --color-tertiary-contrast: #ffffff;
+    --color-tertiary-contrast-rgb: 255, 255, 255;
+    --color-tertiary-shade: #cd84d4;
+    --color-tertiary-tint: #e7b7c8;
+
+    /** success **/
+    --color-success: #7be495;
+    --color-success-rgb: 45, 211, 111;
+    --color-success-contrast: #ffffff;
+    --color-success-contrast-rgb: 255, 255, 255;
+    --color-success-shade: #28ba62;
+    --color-success-tint: #42d77d;
+
+    /** warning **/
+    --color-warning: #f7931e;
+    --color-warning-rgb: 255, 196, 9;
+    --color-warning-contrast: #000000;
+    --color-warning-contrast-rgb: 0, 0, 0;
+    --color-warning-shade: #e0ac08;
+    --color-warning-tint: #ffca22;
+
+    /** danger **/
+    --color-danger: #f70510;
+    --color-danger-rgb: 235, 68, 90;
+    --color-danger-contrast: #ffffff;
+    --color-danger-contrast-rgb: 255, 255, 255;
+    --color-danger-shade: #cf3c4f;
+    --color-danger-tint: #ed576b;
+
+    /** dark **/
+    --dark-background: #000000;
+    --color-dark: #2d2f35;
+    --color-dark-tint: #6a6a6a;
+    --color-dark-shade: #5a5b63;
+    --form-background: #15161a;
+    --form-border: #3c3e45;
+    --dropdown-background: #232429;
+    --content-background: #1b1c21;
+    --color-dark-rgb: 34, 36, 40;
+    --color-dark-contrast: #ffffff;
+    --color-dark-contrast-rgb: 255, 255, 255;
+
+    /** medium **/
+    --color-medium: #92949c;
+    --color-medium-rgb: 146, 148, 156;
+    --color-medium-contrast: #ffffff;
+    --color-medium-contrast-rgb: 255, 255, 255;
+    --color-medium-shade: #808289;
+    --color-medium-tint: #9d9fa6;
+
+    /** light **/
+    --color-light: #f4f5f8;
+    --color-light-rgb: 244, 245, 248;
+    --color-light-contrast: #000000;
+    --color-light-contrast-rgb: 0, 0, 0;
+    --color-light-shade: #d7d8da;
+    --color-light-tint: #f5f6f9;
+
+    /** header colors **/
+    --color-header: #205072;
+
+    /** icon colors **/
+    --color-icon: #c4c4c4;
+    --gray-background: #eeeeee;
+    --white-background: #fff;
+    --color-nav: #fff;
+    --ghostwhite-background: #f7f8fa;
+    --border-table-color: #dee2e6;
+
+    /** Title **/
+    --color-welcome: #fcfffc;
+    --border-color: #2050726b;
+    --logotheme: #ff9933;
+    --upload-background: #e0ecde42;
+    --upload-border: #cde0c9;
+    --box-shadow: #63bcc947;
+
+    /** Accordion **/
+    --color-accordion: #15161a;
+}
+
+@media (prefers-color-scheme: dark) {
+    /*
+     * Dark Colors
+     * -------------------------------------------
+     */
+
+    body {
+        /** primary **/
+        --color-primary: #329d9c;
+        --color-primary-rgb: 56, 128, 255;
+        --color-primary-contrast: #ffffff;
+        --color-primary-contrast-rgb: 255, 255, 255;
+        --color-primary-shade: #7be495;
+        --color-primary-tint: #56c596;
+        --color-primary-title: #205072;
+
+        /** secondary **/
+        --color-secondary: #2c6975;
+        --color-secondary-rgb: 61, 194, 255;
+        --color-secondary-contrast: #ffffff;
+        --color-secondary-contrast-rgb: 255, 255, 255;
+        --color-secondary-shade: #6882a0;
+        --color-secondary-tint: #cde0c9;
+
+        /** tertiary **/
+        --color-tertiary: #47cacc;
+        --color-tertiary-rgb: 82, 96, 255;
+        --color-tertiary-contrast: #ffffff;
+        --color-tertiary-contrast-rgb: 255, 255, 255;
+        --color-tertiary-shade: #cd84d4;
+        --color-tertiary-tint: #e7b7c8;
+
+        /** success **/
+        --color-success: #7be495;
+        --color-success-rgb: 45, 211, 111;
+        --color-success-contrast: #ffffff;
+        --color-success-contrast-rgb: 255, 255, 255;
+        --color-success-shade: #28ba62;
+        --color-success-tint: #42d77d;
+
+        /** warning **/
+        --color-warning: #ffcf5c;
+        --color-warning-rgb: 255, 196, 9;
+        --color-warning-contrast: #000000;
+        --color-warning-contrast-rgb: 0, 0, 0;
+        --color-warning-shade: #e0ac08;
+        --color-warning-tint: #ffca22;
+
+        /** danger **/
+        --color-danger: #f70510;
+        --color-danger-rgb: 235, 68, 90;
+        --color-danger-contrast: #ffffff;
+        --color-danger-contrast-rgb: 255, 255, 255;
+        --color-danger-shade: #cf3c4f;
+        --color-danger-tint: #ed576b;
+
+        /** dark **/
+        --color-dark: #222428;
+        --color-dark-rgb: 34, 36, 40;
+        --color-dark-contrast: #ffffff;
+        --color-dark-contrast-rgb: 255, 255, 255;
+        --color-dark-shade: #1e2023;
+        --color-dark-tint: #383a3e;
+
+        /** medium **/
+        --color-medium: #92949c;
+        --color-medium-rgb: 146, 148, 156;
+        --color-medium-contrast: #ffffff;
+        --color-medium-contrast-rgb: 255, 255, 255;
+        --color-medium-shade: #808289;
+        --color-medium-tint: #9d9fa6;
+
+        /** light **/
+        --color-light: #f4f5f8;
+        --color-light-rgb: 244, 245, 248;
+        --color-light-contrast: #000000;
+        --color-light-contrast-rgb: 0, 0, 0;
+        --color-light-shade: #d7d8da;
+        --color-light-tint: #f5f6f9;
+
+        /** header colors **/
+        --color-header: #205072;
+
+        /** icon colors **/
+        --color-icon: #cde0c9;
+        --color-icon: ##ffffff;
+        --gray-background: #eeeeee;
+        --white-background: #fff;
+        --color-nav: #fff;
+        --ghostwhite-background: #f7f8fa;
+
+        /** Title **/
+        --color-primary-title: #205072;
+        --color-welcome: #fcfffc;
+        --border-color: #2050726b;
+    }
+
+    /*
+     * iOS Dark Theme
+     * -------------------------------------------
+     */
+
+    .ios body {
+        --background-color: #000000;
+        --background-color-rgb: 0, 0, 0;
+
+        --text-color: #ffffff;
+        --text-color-rgb: 255, 255, 255;
+
+        --color-step-50: #0d0d0d;
+        --color-step-100: #1a1a1a;
+        --color-step-150: #262626;
+        --color-step-200: #333333;
+        --color-step-250: #404040;
+        --color-step-300: #4d4d4d;
+        --color-step-350: #595959;
+        --color-step-400: #666666;
+        --color-step-450: #737373;
+        --color-step-500: #808080;
+        --color-step-550: #8c8c8c;
+        --color-step-600: #999999;
+        --color-step-650: #a6a6a6;
+        --color-step-700: #b3b3b3;
+        --color-step-750: #bfbfbf;
+        --color-step-800: #cccccc;
+        --color-step-850: #d9d9d9;
+        --color-step-900: #e6e6e6;
+        --color-step-950: #f2f2f2;
+
+        --toolbar-background: #0d0d0d;
+
+        --item-background: #000000;
+
+        --card-background: #1c1c1d;
+    }
+
+    /*
+     * Material Design Dark Theme
+     * -------------------------------------------
+     */
+
+    .md body {
+        --background-color: #121212;
+        --background-color-rgb: 18, 18, 18;
+
+        --text-color: #ffffff;
+        --text-color-rgb: 255, 255, 255;
+
+        --border-color: #222222;
+
+        --color-step-50: #1e1e1e;
+        --color-step-100: #2a2a2a;
+        --color-step-150: #363636;
+        --color-step-200: #414141;
+        --color-step-250: #4d4d4d;
+        --color-step-300: #595959;
+        --color-step-350: #656565;
+        --color-step-400: #717171;
+        --color-step-450: #7d7d7d;
+        --color-step-500: #898989;
+        --color-step-550: #949494;
+        --color-step-600: #a0a0a0;
+        --color-step-650: #acacac;
+        --color-step-700: #b8b8b8;
+        --color-step-750: #c4c4c4;
+        --color-step-800: #d0d0d0;
+        --color-step-850: #dbdbdb;
+        --color-step-900: #e7e7e7;
+        --color-step-950: #f3f3f3;
+
+        --item-background: #1e1e1e;
+
+        --toolbar-background: #1f1f1f;
+
+        --tab-bar-background: #1f1f1f;
+
+        --card-background: #ffffff;
+    }
+}

@@ -1,0 +1,35 @@
+.selfie-screen {
+    text-align: center;
+}
+
+.upload-content {
+    p {
+        font-size: 1.4rem !important;
+        font-weight: 500 !important;
+        color: #fff !important;
+        line-height: 2rem;
+    }
+    .steps-content {
+        margin: 10rem 0;
+        .things-to-do {
+            display: flex;
+            align-items: center;
+            line-height: 2rem;
+            p {
+                text-align: left;
+            }
+        }
+    }
+
+    .thumb-icon {
+        font-size: 3rem;
+        color: #fff;
+        padding: 0 2rem;
+    }
+}
+
+// too many classes to handle specificity issues
+.form-wrapper .upload-content .inlineButton.capture-selfie-button {
+    // override global styles from App.scss
+    margin-left: unset !important;
+}

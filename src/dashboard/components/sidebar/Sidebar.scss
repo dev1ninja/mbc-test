@@ -1,0 +1,37 @@
+ul {
+    width: 75%;
+    .menu-list {
+        list-style-type: none;
+        font-size: 2.8rem;
+        line-height: 9.6rem;
+        font-weight: 900;
+        color: var(--color-dark);
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        span,
+        p {
+            padding: 0 2rem;
+            font-size: 2.8rem;
+            line-height: 9.6rem;
+            font-weight: 900;
+        }
+        p {
+            width: 100%;
+        }
+        &.active {
+            color: var(--primary-contrast);
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        &.completed {
+            color: var(--primary-button);
+        }
+        &.active.completed {
+            color: var(--primary-contrast);
+            svg {
+                color: #f7931e;
+            }
+        }
+    }
+}

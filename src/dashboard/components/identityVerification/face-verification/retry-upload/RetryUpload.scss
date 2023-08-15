@@ -1,0 +1,24 @@
+.retry-btn {
+    position: relative;
+    color: var(--color-warning) !important;
+    border: 1px solid var(--color-warning) !important;
+    font-weight: 100 !important;
+    right: 1rem;
+    background: transparent !important;
+}
+.error-content {
+    margin: 1rem 0;
+    .things-to-do {
+        display: flex;
+        align-items: center;
+        line-height: 2rem;
+        p {
+            text-align: left;
+        }
+    }
+}
+.warning-icon {
+    font-size: 8rem;
+    width: 7rem;
+    color: #fff;
+}

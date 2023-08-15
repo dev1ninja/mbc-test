@@ -1,0 +1,24 @@
+.alertdialog {
+    .MuiDialog-paper {
+        background: #1b1c21;
+        color: #fff;
+        padding: 1rem;
+        width: "40rem";
+        border-radius: 0.2rem;
+    }
+    .MuiDialogTitle-root {
+        background: #1b1c21;
+    }
+    .MuiDialogActions-root .MuiButtonBase-root {
+        width: 18rem;
+    }
+    .close {
+        position: absolute;
+        color: white;
+        right: 2rem;
+        padding: 0.1rem;
+    }
+    .close:hover {
+        color: gray;
+    }
+}

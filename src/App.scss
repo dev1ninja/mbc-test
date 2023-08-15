@@ -1,0 +1,711 @@
+html {
+    font-size: 10px;
+}
+
+@media (min-width: 2000px) and (min-height: 1200px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins";
+    background: var(--dark-background);
+    color: white;
+    font-size: 1.6rem;
+}
+
+html,
+body {
+    font-family: "Poppins";
+    height: 100%;
+    box-sizing: border-box;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px none inset;
+    -webkit-text-fill-color: var(--primary-contrast) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+div.react-datepicker__input-container input.form-field-input:-webkit-autofill,
+div.react-datepicker__input-container input.form-field-input:-webkit-autofill:hover,
+div.react-datepicker__input-container input.form-field-input:-webkit-autofill:focus,
+div.react-datepicker__input-container input.form-field-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px none inset;
+    -webkit-text-fill-color: var(--primary-contrast) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+div.react-datepicker-popper {
+    z-index: 1001;
+}
+
+div.react-datepicker {
+    margin-top: 1rem;
+}
+
+.MainContainer {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+.content {
+    background: var(--content-background);
+}
+//Background Gradient
+.content:before {
+    content: "";
+    width: 2.5rem;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(78, 247, 228, 0.28),
+        rgba(0, 194, 255, 0.2),
+        rgba(42, 147, 238, 0.33),
+        rgba(72, 100, 232, 0.35),
+        rgba(203, 93, 219, 0.29)
+    );
+    position: fixed;
+    filter: blur(6rem);
+    z-index: 1000;
+} //end
+// Only Content is scrollable
+.content {
+    position: relative;
+    left: 41.666667%;
+    min-height: 100vh;
+    height: 100%;
+    z-index: 101;
+}
+.sidebar {
+    position: fixed;
+    z-index: 100;
+    width: 41.666667%;
+} //end
+
+.content .header {
+    font-size: 5rem;
+    justify-content: center;
+    display: flex;
+}
+.header .MuiButton-root {
+    color: white;
+}
+.content-container {
+    box-sizing: border-box;
+    padding-bottom: 4rem;
+}
+.content .form-wrapper {
+    h3 {
+        font-size: 2.8rem;
+        color: var(--primary-contrast);
+        font-weight: 900;
+        margin-bottom: 3rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+        font-weight: 500;
+        color: var(--primary-contrast);
+    }
+    h5 {
+        font-size: 1.6rem;
+        color: var(--primary-contrast);
+        a {
+            color: var(--primary-button);
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+    h6 {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        color: var(--primary-contrast);
+    }
+}
+
+form.form-wrapper {
+    padding: 0 0 0 20%;
+    .form-field,
+    .MuiInputBase-root {
+        border-radius: 0.4rem;
+        padding: 0.2rem 0;
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+        transition: 0.1s all ease-in-out;
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            color: var(--primary-contrast);
+        }
+        .MuiCheckbox-colorSecondary.Mui-checked {
+            color: var(--primary-checkbox);
+        }
+        .MuiCheckbox-root {
+            color: var(--color-dark-shade);
+        }
+    }
+    .py10 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .MuiInputBase-root {
+        color: white;
+    }
+    .MuiFormHelperText-root {
+        margin-top: -1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .form-field .form-field.checkbox {
+        background: var(--form-background);
+    }
+
+    .form-field .MuiRadio-colorSecondary.Mui-checked {
+        color: var(--primary-checkbox);
+    }
+
+    .form-field.disabled .MuiFormControlLabel-root {
+        cursor: not-allowed;
+    }
+    .form-field.selected {
+        border: 1px solid var(--primary-border);
+    }
+    .form-field.disabled label > span {
+        color: var(--color-dark-tint);
+    }
+    .form-field.disabled label > span:first-child {
+        padding: 1.2rem 0.9rem;
+    }
+    .form-field.disabled,
+    .MuiButton-contained.Mui-disabled.form-button {
+        background: var(--color-dark);
+        color: var(--color-dark-tint);
+        border: none;
+    }
+    .form-button {
+        background: var(--primary-button);
+        padding: 1rem 0;
+        width: 18.1rem;
+        border-radius: 0.4rem;
+        margin-top: 4rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+    .form-button.inlineButton {
+        margin: 0;
+        margin-left: 3rem;
+        height: 4.8rem;
+    }
+    .resendWrapper p {
+        color: var(--primary-contrast);
+        margin-top: 1.5rem;
+
+        span {
+            margin-left: 1rem;
+            color: var(--primary-button);
+        }
+    }
+    .buttonWrapper {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        display: flex;
+    }
+    .MuiButton-root {
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .twoColumnInput {
+        display: flex;
+        justify-content: space-between;
+        max-width: 50rem;
+    }
+    .twoColumnInput .MuiInputBase-root {
+        width: 24.5rem;
+    }
+    .twoColumnInput.findAddress {
+        margin-top: 5rem;
+        .MuiInputBase-root {
+            width: 34rem;
+        }
+    }
+    .form-button-outline {
+        color: var(--primary-button);
+        padding: 0 2.4rem;
+        border-radius: 10rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        border-color: var(--primary-button);
+        height: 4.8rem;
+    }
+    .MuiButton-outlined.form-button-outline.Mui-disabled.Mui-disabled {
+        background: var(--content-background);
+        color: var(--color-dark-tint);
+        border: 1px solid var(--form-border);
+    }
+    .twoColumnInput .countryCode .MuiInputBase-root {
+        width: 14rem;
+    }
+
+    .twoColumnInput .phoneNumber .MuiInputBase-root {
+        width: 35rem;
+        display: flex;
+    }
+    .MuiInputAdornment-positionEnd {
+        height: auto;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+    .forgotPassword {
+        margin-top: 2rem;
+    }
+    span.MuiCheckbox-colorPrimary.Mui-checked {
+        color: var(--primary-button);
+    }
+
+    .sameAdressCheckbox .MuiCheckbox-root {
+        color: rgba(90, 91, 99, 1);
+    }
+
+    .sameAdressCheckbox {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 2.5rem 0;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    // TextArea Styling
+    textarea {
+        border: 1px solid var(--form-border);
+        border-radius: 0.4rem;
+        padding: 1.2rem 1.4rem !important;
+        margin-bottom: 1.5rem;
+        transition: 0.1s all ease-in-out;
+        width: 47rem;
+        color: var(--primary-contrast);
+        background: transparent;
+        resize: none;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    textarea:focus {
+        border-color: var(--primary-button);
+        outline: 0;
+    }
+
+    textarea:hover {
+        background: var(--form-background);
+    }
+}
+
+.MuiFormControl-root.form-field-input {
+    display: block;
+    .MuiInputBase-root,
+    .MuiFormLabel-root {
+        color: var(--primary-label-color);
+    }
+
+    .MuiInputLabel-outlined.MuiInputLabel-shrink {
+        display: none;
+    }
+    .PrivateNotchedOutline-legendNotched-4 {
+        max-width: 0;
+    }
+    .MuiOutlinedInput-input {
+        padding: 1.2rem 1.4rem !important;
+        padding-left: 0.4rem !important;
+        width: 95%;
+    }
+
+    .MuiInputLabel-outlined {
+        transform: translate(1.4rem, 1.5rem) scale(1);
+    }
+    .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl:hover {
+        background: var(--form-background);
+    }
+    .MuiOutlinedInput-input:hover::placeholder {
+        color: var(--primary-contrast);
+    }
+    .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+        border-color: var(--form-border);
+    }
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline:hover {
+        border-color: var(--primary-border);
+        border-width: 1px;
+    }
+    .MuiInputBase-root {
+        color: var(--primary-contrast);
+        display: block;
+    }
+    .MuiIconButton-root {
+        color: var(--primary-contrast);
+    }
+    .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+        width: 100%;
+    }
+    &.error .MuiInputBase-root {
+        background: rgba(221, 66, 90, 0.15);
+        border-color: rgba(221, 66, 90, 1);
+        display: flex;
+        &:hover {
+            background: rgba(221, 66, 90, 0.15) !important;
+            border: 1px solid rgba(221, 66, 90, 1);
+        }
+        &.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border: 1px solid rgba(221, 66, 90, 1);
+        }
+    }
+    &.correct .MuiInputBase-root {
+        display: flex;
+    }
+}
+
+.MuiInputBase-root.MuiInput-underline::after {
+    border-bottom: none;
+}
+svg.MuiSvgIcon-colorPrimary {
+    color: var(--primary-button);
+}
+.countryFlag {
+    margin-right: 1rem;
+}
+
+// Datepicker
+div.react-datepicker__input-container {
+    display: block;
+}
+div.react-datepicker-wrapper {
+    display: block;
+}
+div.react-datepicker__input-container input.form-field-input {
+    width: 47rem;
+    padding: 1.4rem;
+    border: 1px solid var(--form-border);
+    border-radius: 0.4rem;
+    padding-left: 1.4rem;
+    margin-bottom: 1.5rem;
+    transition: 0.1s all ease-in-out;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--primary-contrast);
+    outline: none;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] {
+    padding-top: 0 !important;
+    margin: 0 !important;
+}
+
+div.react-datepicker__input-container input.form-field-input:focus {
+    border-color: var(--primary-border);
+}
+div.react-datepicker__input-container input.form-field-input:hover {
+    background: var(--form-background);
+}
+div.react-datepicker__triangle {
+    display: none;
+}
+div.react-datepicker__header,
+div.react-datepicker__month-container {
+    background: var(--form-background);
+    padding: 0.5rem 0rem;
+}
+
+div.react-datepicker__header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+div.react-datepicker__day,
+div.react-datepicker__time-name,
+div.react-datepicker__current-month,
+div.react-datepicker-time__header,
+div.react-datepicker-year-header {
+    color: var(--primary-contrast);
+    background: var(--form-background);
+}
+
+div.react-datepicker__day:hover,
+div.react-datepicker__month-text:hover,
+div.react-datepicker__quarter-text:hover,
+div.react-datepicker__year-text:hover {
+    color: var(--primary-border);
+    background: inherit;
+}
+
+div.react-datepicker {
+    border: 1px solid #3c3e45;
+    background-color: transparent !important;
+}
+
+.react-datepicker__navigation--next,
+.react-datepicker__navigation--previous,
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+    display: none !important;
+}
+
+.react-datepicker__month-container {
+    float: none;
+}
+
+.react-datepicker__month-select,
+.react-datepicker__year-select {
+    background: var(--form-background);
+    color: var(--primary-contrast);
+    border: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    option {
+        padding: 0.5rem 1rem !important;
+    }
+}
+
+.react-datepicker__year-select {
+    width: 10rem;
+
+    &::-webkit-scrollbar {
+        width: 0.4rem;
+        height: 20rem;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 0.6rem var(--dark-background);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: hsla(225, 10%, 27%, 1);
+        border-radius: 0.4rem;
+    }
+}
+
+.react-datepicker__year-dropdown-container--select,
+.react-datepicker__month-dropdown-container--select,
+.react-datepicker__month-year-dropdown-container--select,
+.react-datepicker__year-dropdown-container--scroll,
+.react-datepicker__month-dropdown-container--scroll,
+.react-datepicker__month-year-dropdown-container--scroll {
+    display: inline-block;
+    width: 10rem;
+    margin: 0 1.5rem !important;
+}
+
+div.react-datepicker__month {
+    border: none;
+    padding: 0rem 1rem;
+}
+
+div.react-datepicker__day-names div.react-datepicker__day-name {
+    text-transform: uppercase;
+    color: #6e7191;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.react-datepicker__week {
+    font-size: 1.2rem;
+}
+.react-datepicker__day--disabled,
+.react-datepicker__month-text--disabled,
+.react-datepicker__quarter-text--disabled,
+.react-datepicker__year-text--disabled {
+    color: var(--primary-label-color) !important;
+    cursor: not-allowed !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+    background: var(--primary-border) !important;
+    border-radius: 8rem !important;
+    color: var(--dark-background) !important;
+    outline: none !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    margin: 0.3rem !important;
+    width: 27px !important;
+    height: 27px !important;
+    line-height: 2.7rem !important;
+}
+
+// Country Dropdown
+.MuiAutocomplete-paper {
+    background: var(--dropdown-background) !important;
+    color: var(--primary-contrast) !important;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+.MuiAutocomplete-option:hover {
+    background: var(--form-background) !important;
+}
+.MuiAutocomplete-noOptions {
+    color: var(--primary-contrast) !important;
+}
+.MuiAutocomplete-listbox {
+    width: 100%;
+}
+
+//Input (Number )Increment/ Decrement Icon remove
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+// Error Message
+
+.errorMessage {
+    padding: 1.4rem 1rem 1.4rem 1.2rem;
+    max-width: 47.8rem;
+    color: var(--primary-contrast);
+    background: rgba(221, 66, 90, 0.15);
+    border: 1px solid #dd425a;
+    border-radius: 0.7rem;
+    display: flex;
+}
+
+.errorMessage svg {
+    color: #f50057;
+    margin-right: 1.3rem;
+}
+
+//Media Query
+
+@media (max-width: 1060px) {
+    form.form-wrapper {
+        .twoColumnInput .MuiInputBase-root,
+        .twoColumnInput .phoneNumber .MuiInputBase-root,
+        .twoColumnInput .countryCode .MuiInputBase-root {
+            width: 100%;
+        }
+        .twoColumnInput {
+            display: block;
+        }
+
+        div.react-datepicker__input-container input.form-field-input {
+            width: 95%;
+            padding-right: 0;
+        }
+
+        .twoColumnInput.findAddress .MuiInputBase-root {
+            width: 100%;
+        }
+
+        .form-button-outline {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .navbar .header-menu {
+        padding-right: 0;
+        .nav-links {
+            margin-left: 2rem;
+        }
+
+        a.button {
+            margin-left: 2rem;
+        }
+    }
+}
+.wrapper-content {
+    padding: 0 3rem;
+    .image-content {
+        text-align: center;
+        img {
+            padding: 3rem;
+            width: 40%;
+        }
+    }
+}
+
+.textlabel {
+    margin-bottom: 1rem;
+}
+.things-to-do {
+    display: flex;
+    align-items: center;
+    line-height: 2rem;
+    p {
+        text-align: left;
+        font-size: 1.4rem !important;
+        font-weight: 500 !important;
+        color: var(--primary-contrast) !important;
+        line-height: 2rem;
+    }
+    .thumb-icon {
+        font-size: 3rem;
+        color: var(--primary-contrast);
+        padding: 0 2rem;
+    }
+}
+
+// Toast messages
+
+div.Toastify__toast {
+    background: var(--content-background);
+    color: var(--primary-contrast);
+    border-radius: 0.8rem;
+}
+
+button.Toastify__close-button {
+    align-self: center;
+    color: var(--primary-contrast);
+}
+
+div.Toastify__toast--error {
+    border: 0.2rem solid #e24545;
+    div.Toastify__toast-icon svg {
+        fill: #e24545;
+    }
+}
+
+div.Toastify__toast--success {
+    border: 0.2rem solid var(--primary-border);
+    div.Toastify__toast-icon svg {
+        fill: var(--primary-border);
+    }
+}
+.back-icon {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: #f50057;
+}

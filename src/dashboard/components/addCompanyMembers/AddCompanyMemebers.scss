@@ -1,0 +1,32 @@
+.accordion {
+    .MuiAccordionDetails-root {
+        display: flex;
+        justify-content: center !important;
+    }
+    .MuiTypography-body1 {
+        padding: 0 3rem;
+    }
+    .add-accordion {
+        padding: 1rem 1.5rem;
+    }
+    .MuiAccordion-root {
+        background: var(--color-accordion) !important;
+        color: #fff;
+        margin: 1rem 0;
+    }
+    .MuiAccordionSummary-expandIcon {
+        color: #fff;
+    }
+    .remove-icon {
+        background: #1b1c21;
+        margin: 0.5rem 1rem;
+        padding: 0.5rem;
+        border-radius: 50%;
+    }
+    .MuiFormControl-root.form-field-input .MuiInputBase-root {
+        display: flex;
+    }
+    .shareHolderWrapper {
+        display: block !important;
+    }
+}
